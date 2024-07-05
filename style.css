@@ -173,6 +173,11 @@
     position: relative;
   }
 
+  .hero-section img {
+  position: absolute;
+  top: 15%;
+  }
+
   .hero-section h5 {
     font-size: 0.9rem; /* Smaller font size for small screens */
   }
