@@ -164,11 +164,11 @@
 @media (max-width: 767px) {
   .hero-section {
     padding: 15px;
-    height: 80vh;
+    height: 60vh;
   }
 
   .hero-section .container {
-    height: 80vh;
+    height: 60vh;
     z-index: 1;
     position: relative;
   }
