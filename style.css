@@ -164,18 +164,13 @@
 @media (max-width: 767px) {
   .hero-section {
     padding: 15px;
-    height: 75vh;
+    height: 70vh;
   }
 
   .hero-section .container {
-    height: 75vh;
+    height: 70vh;
     z-index: 1;
     position: relative;
-  }
-
-  .hero-section img {
-  position: absolute;
-  top: 15%;
   }
 
   .hero-section h5 {
