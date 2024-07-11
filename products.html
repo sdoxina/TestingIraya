@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <title>Iraya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Iraya_Favicon.png">
+</head>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand me-auto d-flex align-items-center" href="index.html">
+            <img src="Iraya_Logo.png" alt="Logo" class="navbar-img"> Iraya
+        </a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavbarLabel">
+                    <img src="Iraya_Logo.png" alt="Iraya Logo" style="height: 30px; width: auto; margin-right: 0.5rem;">Iraya
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="store-locator.html">Store Locator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" class="login-button ms-2">Login</a>
+        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<section class="products-sect">
+    <div class="container">
+      <h1 class="section-title">Purchase your favorites</h1>
+      <h6 class="section-subtitle">Discover the joy of our plush collections—shop now and complete your set!</h6>
+      <img src="dividers-ac.png" alt="divider" class="divider">
+  
+      <!-- Filters and Sorting Options -->
+      <div class="filters">
+        <!-- Availability Filter -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="availabilityDropdownButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Availability
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="availabilityDropdownButton">
+                <li><a class="dropdown-item" href="#" data-filter="all">All</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="in-stock">In Stock</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="out-of-stock">Out of Stock</a></li>
+            </ul>
+        </div>
+
+        <!-- Price Range Filters -->
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="priceRangeDropdownButton"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        Price Range
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="priceRangeDropdownButton">
+        <li class="px-3 pt-2 pb-1">
+            <label for="min-price" class="form-label mb-0">Min Price:</label>
+            <input type="number" id="min-price" class="form-control" placeholder="Min" min="0">
+        </li>
+        <li class="px-3 pb-2">
+            <label for="max-price" class="form-label mb-0">Max Price:</label>
+            <input type="number" id="max-price" class="form-control" placeholder="Max" min="0">
+        </li>
+        <li class="px-3 pb-2">
+            <button id="apply-price-filter" class="btn btn-primary">Apply</button>
+        </li>
+        <li class="px-3 pb-2">
+            <span class="results-text">Showing all products</span>
+            <button class="clear-price-filter btn btn-link">Clear</button>
+        </li>
+    </ul>
+</div>
+
+        <!-- Product Category Filter -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Product Category
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdownButton">
+                <li><a class="dropdown-item" href="#" data-filter="all">All</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="anime">Anime</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="danmei">Danmei</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="ghibli">Ghibli</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="Kpop">Kpop</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="manhwa">Manhwa</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="regular">Regular</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="sanrio">Sanrio</a></li>
+                <li><a class="dropdown-item" href="#" data-filter="videogame">Video Game</a></li>
+            </ul>
+        </div>
+
+        <!-- Sort By Filter -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdownButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Sort By
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sortDropdownButton">
+                <li><a class="dropdown-item" href="#" data-sort="best-selling">Best Selling</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="title-az">Title, A-Z</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="title-za">Title, Z-A</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="price-low-high">Price, Low to High</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="price-high-low">Price, High to Low</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="date-new-old">Date, New to Old</a></li>
+                <li><a class="dropdown-item" href="#" data-sort="date-old-new">Date, Old to New</a></li>
+            </ul>
+        </div>
+    </div>
+  
+    <!-- Product Items -->
+      <div class="row row-cols-2 row-cols-sm-4 row-cols-md-4 row-cols-lg-4 row-cols-xl-4 g-4 product-grid">
+        <div class="col">
+          <div class="ps-product" data-availability="out-of-stock" data-price="19.99" data-product-category="sanrio" data-date="2024-01-01">
+            <img src="product-sanrio.png" class="ps-img" alt="Sanrio Characters">
+            <h5 class="ps-title text-center">Sanrio Characters</h5>
+            <p class="ps-price">₱19.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="29.99" data-product-category="ghibli" data-date="2024-01-01">
+            <img src="product-ghibli.png" class="ps-img" alt="Studio Ghibli Characters">
+            <h5 class="ps-title text-center">Studio Ghibli Characters</h5>
+            <p class="ps-price">₱29.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="24.99" data-product-category="danmei" data-date="2024-01-01">
+            <img src="product-danmei.png" class="ps-img" alt="Danmei Characters">
+            <h5 class="ps-title text-center">Danmei Characters</h5>
+            <p class="ps-price">₱24.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="34.99" data-product-category="videogame" data-date="2024-01-01">
+            <img src="product-video-game.png" class="ps-img" alt="Video Game Characters">
+            <h5 class="ps-title text-center">Video Game Characters</h5>
+            <p class="ps-price">₱34.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="22.99" data-product-category="manhwa" data-date="2024-01-01">
+            <img src="product-manhwa.png" class="ps-img" alt="Manhwa Characters">
+            <h5 class="ps-title text-center">Manhwa Characters</h5>
+            <p class="ps-price">₱22.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="27.99" data-product-category="Kpop" data-date="2024-01-01">
+            <img src="product-kpop.png" class="ps-img" alt="Kpop Characters">
+            <h5 class="ps-title text-center">Kpop Characters</h5>
+            <p class="ps-price">₱27.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="26.99" data-product-category="anime" data-date="2024-01-01">
+            <img src="product-anime.png" class="ps-img" alt="Anime Characters">
+            <h5 class="ps-title text-center">Anime Characters</h5>
+            <p class="ps-price">₱26.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="ps-product" data-availability="in-stock" data-price="15.99" data-product-category="regular" data-date="2024-01-01">
+            <img src="product-regular.png" class="ps-img" alt="Regular Plushies">
+            <h5 class="ps-title text-center">Regular Plushies</h5>
+            <p class="ps-price">₱15.99</p>
+            <div class="ps-buttons">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy it Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <ul class="footer flex-column list-unstyled">
+              <li class="footer-item mb-2"><a href="index.html#about" class="footer-link p-0 text-body-secondary">About Iraya</a></li>
+              <li class="footer-item mb-2"><a href="products.html" class="footer-link p-0 text-body-secondary">Products</a></li>
+              <li class="footer-item mb-2"><a href="store-locator.html" class="footer-link p-0 text-body-secondary">Store Locator</a></li>
+              <li class="footer-item mb-2"><a href="#" class="footer-link p-0 text-body-secondary">Events</a></li>
+              <li class="footer-item mb-2"><a href="#" class="footer-link p-0 text-body-secondary">Contact</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Web Designer</h5>
+            <h6>Shane Oxina</h6>
+            <br>
+            <h5>Email</h5>
+            <h6><a href="mailto:oxinashane@gmail.com">oxinashane@gmail.com</a></h6>
+          </div>
+  
+          <div class="col-md-7 offset-md-1 mb-3">
+            <img src="Iraya_LogowName.png" alt="Iraya Logo">
+          </div>
+        </div>
+  
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>Copyright &copy; 2024 Iraya. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </footer>
+  
+</body>
+</html>
