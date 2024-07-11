@@ -55,10 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
                 case "price-high-low":
                     return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
-                case "date-new-old":
-                    return new Date(b.dataset.date) - new Date(a.dataset.date);
-                case "date-old-new":
-                    return new Date(a.dataset.date) - new Date(b.dataset.date);
                 default:
                     return 0;
             }
@@ -82,9 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
             case "price-low-high":
             case "price-high-low":
                 return parseFloat(product.dataset.price);
-            case "date-new-old":
-            case "date-old-new":
-                return new Date(product.dataset.date);
             default:
                 return "";
         }
